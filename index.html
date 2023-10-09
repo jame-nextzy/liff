@@ -72,7 +72,9 @@
 
     async function scanCode() {
       const result = await liff.scanCode()
-      document.getElementById("scanCode").innerHTML(result.value)
+      console.log("QR code: ", result)
+      const codeElement = document.getElementById("scanCode")
+      codeElement.innerHTML = `<b>Code:</b> ${result.value}`;
     }
     
     function openWindow() {
