@@ -126,7 +126,7 @@
         document.getElementById('userId').append(profile.userId)
         document.getElementById('statusMessage').append(profile.statusMessage)
         document.getElementById('displayName').append(profile.displayName)
-        document.getElementById('getDecodedIDToken').append(liff.getDecodedIDToken().email)
+        document.getElementById('decodedIDToken').append(liff.getDecodedIDToken().email)
       }
 
       function getEnvironment() {
@@ -148,6 +148,7 @@
         await liff.init({ liffId: '2001075887-k63dVbA9' })
         getEnvironment()
         getUserProfile()
+        getContext()
       }
       main()
     </script>
