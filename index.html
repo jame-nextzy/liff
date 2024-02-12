@@ -146,9 +146,13 @@
 
       async function main() {
         await liff.init({ liffId: '2001075887-k63dVbA9' })
-        getEnvironment()
-        getUserProfile()
-        getContext()
+        document.getElementById('isLoggedIn').append(liff.isLoggedIn())
+        if (liff.isLoggedIn()) {
+          getEnvironment()
+          getUserProfile()
+          getContext()
+          // getFriendship()
+        }
       }
       main()
     </script>
